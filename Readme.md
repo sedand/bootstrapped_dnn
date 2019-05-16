@@ -4,7 +4,7 @@ Implementation of a regression DNN with multiple 'bootstrap heads' for modelling
 The multiple ensemble networks are combined into a single efficient network with a 'body' of shared variables and several 'heads' with separate variables.
 The probability of a head being trained on a training sample is controlled via sampling a binary bootstrap mask.
 
-> Based on "Deep Exploration via Bootstrapped DQN" by Ian Osband et al.
+> Based on "Deep Exploration via Bootstrapped DQN" by Ian Osband et al.   
 > http://papers.nips.cc/paper/6500-deep-exploration-via-bootstrapped-dqn
 
 Note: This implementation is regression only, no reinforcement learning parts are included.
