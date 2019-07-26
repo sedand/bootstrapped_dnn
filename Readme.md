@@ -11,7 +11,7 @@ Note: This implementation is regression only, no reinforcement learning parts ar
 
 `$ python example_bootstrap.py`
 
-![](bootstrap.png)
+![](img/bootstrap.png)
 
 ## Extended version that also estimates aleatoric uncertainty (data noise) in addition to epistemic uncertainty:
 
@@ -19,10 +19,10 @@ Note: This implementation is regression only, no reinforcement learning parts ar
 
 Note: As each head estimates the data noise, the following plot shows the mean reported by all heads.
 
-![](bootstrap_epis_alea.png)
+![](img/bootstrap_epis_alea.png)
 
 ## Simple dnn that only estimates aleatoric uncertainty (no bootstrap):
 
 `$ python example_dnn_alea.py`
 
-![](dnn_alea.png)
+![](img/dnn_alea.png)
