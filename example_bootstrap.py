@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 HEADS_N = 10
 
 x_data = np.linspace(0,10,100)
-y_data = np.sin(x_data)
+y_data = np.sin(x_data) + np.random.normal(0, .2, x_data.shape)
 x_data = x_data.reshape(-1, 1)
 y_data = y_data.reshape(-1, 1)
 
@@ -48,7 +48,7 @@ fig,axes = plt.subplots(nrows=2, figsize=(8,8))
 axes[0].plot(losses)
 axes[0].set_xlabel('epoch')
 axes[0].set_ylabel('loss')
-axes[1].fill_between(x_test.reshape(-1), heads_mean+heads_var, heads_mean-heads_var, color='r', alpha=.2, label="prediction var")
+axes[1].fill_between(x_test.reshape(-1), heads_mean+heads_var, heads_mean-heads_var, color='r', alpha=.2, label="prediction var (epis)")
 axes[1].fill_between(x_test.reshape(-1), heads_mean+heads_var*2, heads_mean-heads_var*2, color='r', alpha=.2)
 axes[1].plot(x_test, heads_mean, '-', color='r', lw=1, label='prediction mean')
 axes[1].set_ylim((2, -2))
